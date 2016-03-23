@@ -13,25 +13,30 @@ function css_generator($code, $class){
     if($css_code['color']){
 	echo ' color:'.$css_code['color'].';';
     }else{}
-    
+
+
     if($css_code['width']){
 	$width = $css_code['width']*5;
-	    	
+
 	echo ' width:'.$width.'%;';
-    }else{}
+    }else{
+      echo 'width:5%';
+    }
 
     if($css_code['height']){
-	$height = $css_code['height']*50;	    	
+	$height = $css_code['height']*50;
 	echo ' height:'.$height.'px;';
-    }else{}
+    }else{
+      echo 'height:20px';
+    }
 
     if($css_code['top']){
-	$top = $css_code['top']*50;	    	
+	$top = $css_code['top']*50;
 	echo ' top:'.$top.'px;';
     }else{}
-	
+
     if($css_code['left']){
-	$left = $css_code['left']*5;	    	
+	$left = $css_code['left']*5;
 	echo ' left:'.$left.'%;';
     }else{}
 
@@ -44,9 +49,22 @@ function css_generator($code, $class){
     }else{
 	echo ' position:absolute;';
     }
+
     if($css_code['background']){
-	echo ' background:'.$css_code['background'].';'; 
+	echo ' background:'.$css_code['background'].';';
     }else{}
+
+    if($css_code['border']){
+	echo ' border:'.$css_code['border'].'px;';
+    }else{
+	echo ' border:0px solid black;';
+    }
+
+    if($css_code['font-family']){
+	echo ' font-family:"'.$css_code['font-family'].'";';
+    }else{
+	echo ' font-family:"combat";';
+    }
 
     if($css_code['padding']){
 	echo ' padding:'.$css_code['padding'].'px;';

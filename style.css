@@ -6,8 +6,22 @@ Author URI: http://www.atelier-bek.be/
 Tags: simple:
 */
 
+
+  @font-face {
+  font-family: "Inknut";
+  src: url("InknutAntiqua_Regular_none.ttf");
+}
+
+  @font-face {
+    font-family: "combat";
+    src: url("recherches/typotheque/empattements/combat_regular_none.ttf");
+}
+
 body{
-    background:pink;
+    background:white;
+font-family: "combat";
+}
+p{margin-top: 0px;
 }
 
 h1{
