@@ -15,9 +15,10 @@ Tags: simple:
 
 
 body{
-    background:white;
 }
-p{margin-top: 0px
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h1{

@@ -9,8 +9,7 @@ function css_generator($code, $class){
 	$css_code += [ "$split_css[0]" => "$split_css[1]" ];
     }
     if($css_code['font-family']){
-	echo ' @font-face { font-family:"'.$css_code['font-family'].'";
-src:url("';
+	echo ' @font-face { font-family:"'.$css_code['font-family'].'"; src:url("';
     echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
     }else{}
     
@@ -32,9 +31,10 @@ src:url("';
 
     if($css_code['height']){
 	$height = $css_code['height']*50;
-	echo ' height:'.$height.'px;';
+	echo ' min-height:'.$height.'px;';
+	echo ' haight:auto;';
     }else{
-      echo 'height:20px';
+      echo 'height:50px';
     }
 
     if($css_code['top']){
