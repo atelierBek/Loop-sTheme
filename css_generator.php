@@ -34,9 +34,8 @@ function css_generator($code, $class){
 	echo ' min-height:'.$height.'px;';
 	echo ' height:auto;';
     }else{
-      echo 'height:50px;';
-      echo ' height:auto;';
-
+	echo 'min-height:50px;';
+	echo ' height:auto;';
     }
 
     if($css_code['top']){
