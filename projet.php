@@ -44,8 +44,6 @@ echo '</style>';
 
 
 <script>
-    $taille = 
-    $('.titre').hide();
 
 
 </script>
