@@ -12,7 +12,7 @@ function css_generator($code, $class){
 	echo ' @font-face { font-family:"'.$css_code['font-family'].'"; src:url("';
     echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
     }else{}
-    
+
 
     echo '.'.$class.'{';
 
@@ -32,9 +32,11 @@ function css_generator($code, $class){
     if($css_code['height']){
 	$height = $css_code['height']*50;
 	echo ' min-height:'.$height.'px;';
-	echo ' haight:auto;';
+	echo ' height:auto;';
     }else{
-      echo 'height:50px';
+      echo 'height:50px;';
+      echo ' height:auto;';
+
     }
 
     if($css_code['top']){
