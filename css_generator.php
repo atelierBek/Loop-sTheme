@@ -12,6 +12,14 @@ function css_generator($code, $class){
 	echo ' @font-face { font-family:"'.$css_code['font-family'].'"; src:url("';
     echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
     }else{}
+    if($class=='body'){
+	echo 'body {';
+	if($css_code['background']){
+	    echo 'background:'.$css_code['background'].';';
+	}
+	echo '} ';
+ 
+    }else{
 
 
     echo '.'.$class.'{';
@@ -85,5 +93,6 @@ function css_generator($code, $class){
     }else{}
 
     echo '}';
+    }
 }
 ?>
