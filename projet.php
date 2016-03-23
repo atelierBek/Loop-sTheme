@@ -7,15 +7,13 @@ while ($pods->fetchRecord()) {
 
 include 'css_generator.php';
 
-echo '<style>
+echo '<style>';
 
-
-';
 css_generator($pods->get_field('titre_code'), 'titre');
 css_generator($pods->get_field('presentation_code'), 'presentation');
 css_generator($pods->get_field('actualites_code'), 'actualites');
 css_generator($pods->get_field('lequipe_code'), 'lequipe');
-css_generator($pods->get_field('body_code'), 'body_code');
+css_generator($pods->get_field('body_code'), 'body');
 css_generator($pods->get_field('media'), 'media');
 
 
@@ -25,7 +23,6 @@ echo '</style>';
     $presentation = $pods->get_field('presentation');
     $actualites = $pods->get_field('actualites');
     $lequipe = $pods->get_field('lequipe');
-    $body_code = $pods->get_field('body_code');
     $media = $pods->get_field('media');
 
     if($titre){
@@ -40,6 +37,5 @@ echo '</style>';
     if($lequipe){
 	echo '<div class="lequipe">'.$lequipe.'</div>';
     }
-
 }
 ?>
