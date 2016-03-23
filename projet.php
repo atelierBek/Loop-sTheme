@@ -1,6 +1,5 @@
 <?php
 
-
 $pods = new Pod('page_projet');
 $pods->findRecords('id DESC', 10);
 
@@ -8,7 +7,10 @@ while ($pods->fetchRecord()) {
 
 include 'css_generator.php';
 
-echo '<style>';
+echo '<style>
+
+
+';
 css_generator($pods->get_field('titre_code'), 'titre');
 css_generator($pods->get_field('presentation_code'), 'presentation');
 css_generator($pods->get_field('actualites_code'), 'actualites');
@@ -26,14 +28,18 @@ echo '</style>';
     $body_code = $pods->get_field('body_code');
     $media = $pods->get_field('media');
 
-?>
-    <div class="titre"><?php echo $titre; ?></div>
-    <div class="presentation"><?php echo $presentation; ?></div>
-    <div class="actualites"><?php echo $actualites; ?></div>
-    <div class="lequipe"><?php echo $lequipe; ?></div>
-    <div class="body_code"><?php echo $body_code; ?></div>
-    <div class="media"><?php echo $media; ?></div>
+    if($titre){
+	echo '<div class="titre">'.$titre.'</div>';
+    }
+    if($presentation){
+	echo '<div class="presentation">'.$presentation.'</div>';
+    }
+    if($agenda){
+	echo '<div class="agenda">'.$agenda.'</div>';
+    }
+    if($lequipe){
+	echo '<div class="lequipe">'.$lequipe.'</div>';
+    }
 
-<?php
 }
 ?>

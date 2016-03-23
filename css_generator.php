@@ -8,6 +8,13 @@ function css_generator($code, $class){
 	$split_css = explode(':', $code[$i]);
 	$css_code += [ "$split_css[0]" => "$split_css[1]" ];
     }
+    if($css_code['font-family']){
+	echo ' @font-face { font-family:"'.$css_code['font-family'].'";
+src:url("';
+    echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
+    }else{}
+    
+
     echo '.'.$class.'{';
 
     if($css_code['color']){
@@ -49,7 +56,6 @@ function css_generator($code, $class){
     }else{
 	echo ' position:absolute;';
     }
-
     if($css_code['background']){
 	echo ' background:'.$css_code['background'].';';
     }else{}
@@ -59,18 +65,23 @@ function css_generator($code, $class){
     }else{
 	echo ' border:0px solid black;';
     }
-
     if($css_code['font-family']){
 	echo ' font-family:"'.$css_code['font-family'].'";';
-    }else{
-	echo ' font-family:"combat";';
-    }
+    }else{}
 
     if($css_code['padding']){
 	echo ' padding:'.$css_code['padding'].'px;';
     }else{
 	echo ' padding:3px;';
     }
+    if($css_code['text-align']){
+	echo ' text-align:'.$css_code['text-align'].';';
+    }else{
+	echo ' text-align:left;';
+    }
+    if($css_code['z-index']){
+	echo ' z-index:'.$css_code['z-index'].';';
+    }else{}
 
     echo '}';
 }
