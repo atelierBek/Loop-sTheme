@@ -1,6 +1,7 @@
 <?php
 function css_generator($code, $class){
     $code = str_replace(" ", "", $code);
+    $code = str_replace("|", " ",$code);
     $code = explode(";", $code);
     $count_code = count($code);
     $css_code = [];
@@ -70,9 +71,10 @@ function css_generator($code, $class){
     }else{}
 
     if($css_code['border']){
-	echo ' border:'.$css_code['border'].'px;';
+	echo ' border:'.$css_code['border'].';';
+
     }else{
-	echo ' border:0px solid black;';
+	echo ' border:none';
     }
     if($css_code['font-family']){
 	echo ' font-family:"'.$css_code['font-family'].'";';
@@ -91,6 +93,11 @@ function css_generator($code, $class){
     if($css_code['z-index']){
 	echo ' z-index:'.$css_code['z-index'].';';
     }else{}
+
+    if($css_code['line-height']){
+	echo ' line-height:'.$css_code['line-height'].'px;';
+    }else{}
+
 
     echo '}';
     }
