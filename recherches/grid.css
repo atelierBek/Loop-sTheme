@@ -1,0 +1,38 @@
+body{
+    margin:0px;
+}
+
+.grid{
+margin:0px;
+}
+
+hr{
+    height: 1px;
+    margin:0px;
+    padding: 0;
+    border: 0; 
+}
+
+.elem{
+    position:absolute;
+    top:2000px;
+    width:100px;
+    height:100px;
+    background:pink;
+}
+
+.unite_repereY{
+    margin-top:5px;
+    margin-left:5px;
+    position:absolute;
+    font-family:courier;
+    font-size:9px;
+}
+
+.unite_repereX{
+    font-family:courier;
+    font-size:9px;
+    position:fixed;
+    width:5%;
+    text-align:center;
+}

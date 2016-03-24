@@ -1,0 +1,105 @@
+// Base type styles
+h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3, h4, h5, h6, p { font-size: .75em; }
+small { font-size: .5em; }
+
+.helvetica { font-family: helvetica; line-height: 1.25; }
+
+// Grid container
+.grid {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+// Mixin for creating cells
+@mixin cell($from-x, $from-y, $to-x, $to-y, $number-of-cells: 8) {
+  position: absolute;
+  overflow: hidden;
+  $cell-unit: 100% / $number-of-cells;
+  left: $cell-unit * ($from-x - 1);
+  top: $cell-unit * ($from-y - 1);
+  right: -$cell-unit * ($to-x - $number-of-cells);
+  bottom: -$cell-unit * ($to-y - $number-of-cells);
+}
+
+// Layout
+// Create cell classes for main content
+.cell-2-2-7-4 { @include cell(2,2,7,4); }
+.cell-2-5-7-7 { @include cell(2,5,7,7); }
+.cell-4-6-7-7 { @include cell(4,6,7,7); }
+.cell-2-8-7-8 { @include cell(2,8,7,8); }
+
+// Pagination
+.cell-8-4-8-5 { @include cell(8,4,8,5); }
+
+.pad { padding: 1em; }
+
+// Type Scale
+@mixin type-scale() {
+  $base-font-size: 1; // 1em or 100%
+  $base-width: 512px; // 32em
+  // Amount that the font-size should increase with each step
+  $increment: .25; // .25em or 2%
+  $number-of-steps: 16; // Total number of breakpoints above base size
+  @for $step from 1 through $number-of-steps {
+    $scale: $base-font-size + ($increment * $step);
+    $font-size: percentage($scale);
+    $breakpoint: $scale * $base-width;
+    @media (min-width: $breakpoint) {
+      font-size: $font-size;
+    }
+  }
+}
+.font-scale { @include type-scale; }
+
+
+// Theme
+.theme-dark {
+  color: #fff; background-color: #1c2226;
+  a {
+    color: #0cf;
+    text-decoration: none;
+  }
+}
+.blue { color: #0cf; }
+
+.bg-darken { background-color: rgba(#000,.2); }
+.bg-lighten { background-color: rgba(#fff,.1); }
+.bg-blue { background-color: rgba(#0cf,.2); }
+
+
+
+// For demonstration grid:
+.outline > * { outline: 1px solid rgba(#0cf,.1); }
+.cell-label {
+  color: rgba(#0cf,.1);
+  font-size: .5em;
+  position: absolute;
+  top: 6.25%;
+  right: 6.25%;
+}
+
+// Creates all cell classes for absolute grid
+@mixin create-cell-classes($number-of-cells:8) {
+  .cell {
+    position: absolute;
+    $cell-unit: 100% / $number-of-cells;
+    @for $column from 1 through $number-of-cells {
+      @for $row from 1 through $number-of-cells {
+        &.from-#{$column}-#{$row} {
+          left: $cell-unit * ($column - 1);
+          top: $cell-unit * ($row - 1);
+        }
+        &.to-#{$column}-#{$row} {
+          right: -$cell-unit * ($column - $number-of-cells);
+          bottom: -$cell-unit * ($row - $number-of-cells);
+        }
+      }
+    }
+  }
+}
+// Create classes for 8x8 grid
+// WARNING: This will add a lot of potentially unused styles
+@include create-cell-classes(8);

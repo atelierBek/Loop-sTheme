@@ -1,0 +1,715 @@
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3, h4, h5, h6, p {
+  font-size: .75em;
+}
+
+small {
+  font-size: .5em;
+}
+
+.helvetica {
+  font-family: helvetica;
+  line-height: 1.25;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cell-2-2-7-4 {
+  position: absolute;
+  overflow: hidden;
+  left: 12.5%;
+  top: 12.5%;
+  right: 12.5%;
+  bottom: 50%;
+}
+
+.cell-2-5-7-7 {
+  position: absolute;
+  overflow: hidden;
+  left: 12.5%;
+  top: 50%;
+  right: 12.5%;
+  bottom: 12.5%;
+}
+
+.cell-4-6-7-7 {
+  position: absolute;
+  overflow: hidden;
+  left: 37.5%;
+  top: 62.5%;
+  right: 12.5%;
+  bottom: 12.5%;
+}
+
+.cell-2-8-7-8 {
+  position: absolute;
+  overflow: hidden;
+  left: 12.5%;
+  top: 87.5%;
+  right: 12.5%;
+  bottom: 0%;
+}
+
+.cell-8-4-8-5 {
+  position: absolute;
+  overflow: hidden;
+  left: 87.5%;
+  top: 37.5%;
+  right: 0%;
+  bottom: 37.5%;
+}
+
+.pad {
+  padding: 1em;
+}
+
+@media (min-width: 640px) {
+  .font-scale {
+    font-size: 125%;
+  }
+}
+@media (min-width: 768px) {
+  .font-scale {
+    font-size: 150%;
+  }
+}
+@media (min-width: 896px) {
+  .font-scale {
+    font-size: 175%;
+  }
+}
+@media (min-width: 1024px) {
+  .font-scale {
+    font-size: 200%;
+  }
+}
+@media (min-width: 1152px) {
+  .font-scale {
+    font-size: 225%;
+  }
+}
+@media (min-width: 1280px) {
+  .font-scale {
+    font-size: 250%;
+  }
+}
+@media (min-width: 1408px) {
+  .font-scale {
+    font-size: 275%;
+  }
+}
+@media (min-width: 1536px) {
+  .font-scale {
+    font-size: 300%;
+  }
+}
+@media (min-width: 1664px) {
+  .font-scale {
+    font-size: 325%;
+  }
+}
+@media (min-width: 1792px) {
+  .font-scale {
+    font-size: 350%;
+  }
+}
+@media (min-width: 1920px) {
+  .font-scale {
+    font-size: 375%;
+  }
+}
+@media (min-width: 2048px) {
+  .font-scale {
+    font-size: 400%;
+  }
+}
+@media (min-width: 2176px) {
+  .font-scale {
+    font-size: 425%;
+  }
+}
+@media (min-width: 2304px) {
+  .font-scale {
+    font-size: 450%;
+  }
+}
+@media (min-width: 2432px) {
+  .font-scale {
+    font-size: 475%;
+  }
+}
+@media (min-width: 2560px) {
+  .font-scale {
+    font-size: 500%;
+  }
+}
+
+.theme-dark {
+  color: #fff;
+  background-color: #1c2226;
+}
+.theme-dark a {
+  color: #0cf;
+  text-decoration: none;
+}
+
+.blue {
+  color: #0cf;
+}
+
+.bg-darken {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-lighten {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-blue {
+  background-color: rgba(0, 204, 255, 0.2);
+}
+
+.outline > * {
+  outline: 1px solid rgba(0, 204, 255, 0.1);
+}
+
+.cell-label {
+  color: rgba(0, 204, 255, 0.1);
+  font-size: .5em;
+  position: absolute;
+  top: 6.25%;
+  right: 6.25%;
+}
+
+.cell {
+  position: absolute;
+}
+.cell.from-1-1 {
+  left: 0%;
+  top: 0%;
+}
+.cell.to-1-1 {
+  right: 87.5%;
+  bottom: 87.5%;
+}
+.cell.from-1-2 {
+  left: 0%;
+  top: 12.5%;
+}
+.cell.to-1-2 {
+  right: 87.5%;
+  bottom: 75%;
+}
+.cell.from-1-3 {
+  left: 0%;
+  top: 25%;
+}
+.cell.to-1-3 {
+  right: 87.5%;
+  bottom: 62.5%;
+}
+.cell.from-1-4 {
+  left: 0%;
+  top: 37.5%;
+}
+.cell.to-1-4 {
+  right: 87.5%;
+  bottom: 50%;
+}
+.cell.from-1-5 {
+  left: 0%;
+  top: 50%;
+}
+.cell.to-1-5 {
+  right: 87.5%;
+  bottom: 37.5%;
+}
+.cell.from-1-6 {
+  left: 0%;
+  top: 62.5%;
+}
+.cell.to-1-6 {
+  right: 87.5%;
+  bottom: 25%;
+}
+.cell.from-1-7 {
+  left: 0%;
+  top: 75%;
+}
+.cell.to-1-7 {
+  right: 87.5%;
+  bottom: 12.5%;
+}
+.cell.from-1-8 {
+  left: 0%;
+  top: 87.5%;
+}
+.cell.to-1-8 {
+  right: 87.5%;
+  bottom: 0%;
+}
+.cell.from-2-1 {
+  left: 12.5%;
+  top: 0%;
+}
+.cell.to-2-1 {
+  right: 75%;
+  bottom: 87.5%;
+}
+.cell.from-2-2 {
+  left: 12.5%;
+  top: 12.5%;
+}
+.cell.to-2-2 {
+  right: 75%;
+  bottom: 75%;
+}
+.cell.from-2-3 {
+  left: 12.5%;
+  top: 25%;
+}
+.cell.to-2-3 {
+  right: 75%;
+  bottom: 62.5%;
+}
+.cell.from-2-4 {
+  left: 12.5%;
+  top: 37.5%;
+}
+.cell.to-2-4 {
+  right: 75%;
+  bottom: 50%;
+}
+.cell.from-2-5 {
+  left: 12.5%;
+  top: 50%;
+}
+.cell.to-2-5 {
+  right: 75%;
+  bottom: 37.5%;
+}
+.cell.from-2-6 {
+  left: 12.5%;
+  top: 62.5%;
+}
+.cell.to-2-6 {
+  right: 75%;
+  bottom: 25%;
+}
+.cell.from-2-7 {
+  left: 12.5%;
+  top: 75%;
+}
+.cell.to-2-7 {
+  right: 75%;
+  bottom: 12.5%;
+}
+.cell.from-2-8 {
+  left: 12.5%;
+  top: 87.5%;
+}
+.cell.to-2-8 {
+  right: 75%;
+  bottom: 0%;
+}
+.cell.from-3-1 {
+  left: 25%;
+  top: 0%;
+}
+.cell.to-3-1 {
+  right: 62.5%;
+  bottom: 87.5%;
+}
+.cell.from-3-2 {
+  left: 25%;
+  top: 12.5%;
+}
+.cell.to-3-2 {
+  right: 62.5%;
+  bottom: 75%;
+}
+.cell.from-3-3 {
+  left: 25%;
+  top: 25%;
+}
+.cell.to-3-3 {
+  right: 62.5%;
+  bottom: 62.5%;
+}
+.cell.from-3-4 {
+  left: 25%;
+  top: 37.5%;
+}
+.cell.to-3-4 {
+  right: 62.5%;
+  bottom: 50%;
+}
+.cell.from-3-5 {
+  left: 25%;
+  top: 50%;
+}
+.cell.to-3-5 {
+  right: 62.5%;
+  bottom: 37.5%;
+}
+.cell.from-3-6 {
+  left: 25%;
+  top: 62.5%;
+}
+.cell.to-3-6 {
+  right: 62.5%;
+  bottom: 25%;
+}
+.cell.from-3-7 {
+  left: 25%;
+  top: 75%;
+}
+.cell.to-3-7 {
+  right: 62.5%;
+  bottom: 12.5%;
+}
+.cell.from-3-8 {
+  left: 25%;
+  top: 87.5%;
+}
+.cell.to-3-8 {
+  right: 62.5%;
+  bottom: 0%;
+}
+.cell.from-4-1 {
+  left: 37.5%;
+  top: 0%;
+}
+.cell.to-4-1 {
+  right: 50%;
+  bottom: 87.5%;
+}
+.cell.from-4-2 {
+  left: 37.5%;
+  top: 12.5%;
+}
+.cell.to-4-2 {
+  right: 50%;
+  bottom: 75%;
+}
+.cell.from-4-3 {
+  left: 37.5%;
+  top: 25%;
+}
+.cell.to-4-3 {
+  right: 50%;
+  bottom: 62.5%;
+}
+.cell.from-4-4 {
+  left: 37.5%;
+  top: 37.5%;
+}
+.cell.to-4-4 {
+  right: 50%;
+  bottom: 50%;
+}
+.cell.from-4-5 {
+  left: 37.5%;
+  top: 50%;
+}
+.cell.to-4-5 {
+  right: 50%;
+  bottom: 37.5%;
+}
+.cell.from-4-6 {
+  left: 37.5%;
+  top: 62.5%;
+}
+.cell.to-4-6 {
+  right: 50%;
+  bottom: 25%;
+}
+.cell.from-4-7 {
+  left: 37.5%;
+  top: 75%;
+}
+.cell.to-4-7 {
+  right: 50%;
+  bottom: 12.5%;
+}
+.cell.from-4-8 {
+  left: 37.5%;
+  top: 87.5%;
+}
+.cell.to-4-8 {
+  right: 50%;
+  bottom: 0%;
+}
+.cell.from-5-1 {
+  left: 50%;
+  top: 0%;
+}
+.cell.to-5-1 {
+  right: 37.5%;
+  bottom: 87.5%;
+}
+.cell.from-5-2 {
+  left: 50%;
+  top: 12.5%;
+}
+.cell.to-5-2 {
+  right: 37.5%;
+  bottom: 75%;
+}
+.cell.from-5-3 {
+  left: 50%;
+  top: 25%;
+}
+.cell.to-5-3 {
+  right: 37.5%;
+  bottom: 62.5%;
+}
+.cell.from-5-4 {
+  left: 50%;
+  top: 37.5%;
+}
+.cell.to-5-4 {
+  right: 37.5%;
+  bottom: 50%;
+}
+.cell.from-5-5 {
+  left: 50%;
+  top: 50%;
+}
+.cell.to-5-5 {
+  right: 37.5%;
+  bottom: 37.5%;
+}
+.cell.from-5-6 {
+  left: 50%;
+  top: 62.5%;
+}
+.cell.to-5-6 {
+  right: 37.5%;
+  bottom: 25%;
+}
+.cell.from-5-7 {
+  left: 50%;
+  top: 75%;
+}
+.cell.to-5-7 {
+  right: 37.5%;
+  bottom: 12.5%;
+}
+.cell.from-5-8 {
+  left: 50%;
+  top: 87.5%;
+}
+.cell.to-5-8 {
+  right: 37.5%;
+  bottom: 0%;
+}
+.cell.from-6-1 {
+  left: 62.5%;
+  top: 0%;
+}
+.cell.to-6-1 {
+  right: 25%;
+  bottom: 87.5%;
+}
+.cell.from-6-2 {
+  left: 62.5%;
+  top: 12.5%;
+}
+.cell.to-6-2 {
+  right: 25%;
+  bottom: 75%;
+}
+.cell.from-6-3 {
+  left: 62.5%;
+  top: 25%;
+}
+.cell.to-6-3 {
+  right: 25%;
+  bottom: 62.5%;
+}
+.cell.from-6-4 {
+  left: 62.5%;
+  top: 37.5%;
+}
+.cell.to-6-4 {
+  right: 25%;
+  bottom: 50%;
+}
+.cell.from-6-5 {
+  left: 62.5%;
+  top: 50%;
+}
+.cell.to-6-5 {
+  right: 25%;
+  bottom: 37.5%;
+}
+.cell.from-6-6 {
+  left: 62.5%;
+  top: 62.5%;
+}
+.cell.to-6-6 {
+  right: 25%;
+  bottom: 25%;
+}
+.cell.from-6-7 {
+  left: 62.5%;
+  top: 75%;
+}
+.cell.to-6-7 {
+  right: 25%;
+  bottom: 12.5%;
+}
+.cell.from-6-8 {
+  left: 62.5%;
+  top: 87.5%;
+}
+.cell.to-6-8 {
+  right: 25%;
+  bottom: 0%;
+}
+.cell.from-7-1 {
+  left: 75%;
+  top: 0%;
+}
+.cell.to-7-1 {
+  right: 12.5%;
+  bottom: 87.5%;
+}
+.cell.from-7-2 {
+  left: 75%;
+  top: 12.5%;
+}
+.cell.to-7-2 {
+  right: 12.5%;
+  bottom: 75%;
+}
+.cell.from-7-3 {
+  left: 75%;
+  top: 25%;
+}
+.cell.to-7-3 {
+  right: 12.5%;
+  bottom: 62.5%;
+}
+.cell.from-7-4 {
+  left: 75%;
+  top: 37.5%;
+}
+.cell.to-7-4 {
+  right: 12.5%;
+  bottom: 50%;
+}
+.cell.from-7-5 {
+  left: 75%;
+  top: 50%;
+}
+.cell.to-7-5 {
+  right: 12.5%;
+  bottom: 37.5%;
+}
+.cell.from-7-6 {
+  left: 75%;
+  top: 62.5%;
+}
+.cell.to-7-6 {
+  right: 12.5%;
+  bottom: 25%;
+}
+.cell.from-7-7 {
+  left: 75%;
+  top: 75%;
+}
+.cell.to-7-7 {
+  right: 12.5%;
+  bottom: 12.5%;
+}
+.cell.from-7-8 {
+  left: 75%;
+  top: 87.5%;
+}
+.cell.to-7-8 {
+  right: 12.5%;
+  bottom: 0%;
+}
+.cell.from-8-1 {
+  left: 87.5%;
+  top: 0%;
+}
+.cell.to-8-1 {
+  right: 0%;
+  bottom: 87.5%;
+}
+.cell.from-8-2 {
+  left: 87.5%;
+  top: 12.5%;
+}
+.cell.to-8-2 {
+  right: 0%;
+  bottom: 75%;
+}
+.cell.from-8-3 {
+  left: 87.5%;
+  top: 25%;
+}
+.cell.to-8-3 {
+  right: 0%;
+  bottom: 62.5%;
+}
+.cell.from-8-4 {
+  left: 87.5%;
+  top: 37.5%;
+}
+.cell.to-8-4 {
+  right: 0%;
+  bottom: 50%;
+}
+.cell.from-8-5 {
+  left: 87.5%;
+  top: 50%;
+}
+.cell.to-8-5 {
+  right: 0%;
+  bottom: 37.5%;
+}
+.cell.from-8-6 {
+  left: 87.5%;
+  top: 62.5%;
+}
+.cell.to-8-6 {
+  right: 0%;
+  bottom: 25%;
+}
+.cell.from-8-7 {
+  left: 87.5%;
+  top: 75%;
+}
+.cell.to-8-7 {
+  right: 0%;
+  bottom: 12.5%;
+}
+.cell.from-8-8 {
+  left: 87.5%;
+  top: 87.5%;
+}
+.cell.to-8-8 {
+  right: 0%;
+  bottom: 0%;
+}

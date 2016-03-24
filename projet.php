@@ -24,6 +24,8 @@ echo '</style>';
     $actualites = $pods->get_field('actualites');
     $lequipe = $pods->get_field('lequipe');
     $media = $pods->get_field('media');
+    $grille = $pods->get_field('grille');
+    
 
     if($titre){
 	echo '<div class="titre">'.$titre.'</div>';
@@ -37,11 +39,10 @@ echo '</style>';
     if($lequipe){
 	echo '<div class="lequipe">'.$lequipe.'</div>';
     }
+    if($grille==1){
+	echo '<div class="grid"></div>';
+    }
 }
 ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js"></script>
 
-
-<script>
-
-
-</script>
