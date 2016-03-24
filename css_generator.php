@@ -74,7 +74,7 @@ function css_generator($code, $class){
 	echo ' border:'.$css_code['border'].';';
 
     }else{
-	echo ' border:none';
+	echo ' border:none;';
     }
     if($css_code['font-family']){
 	echo ' font-family:"'.$css_code['font-family'].'";';
