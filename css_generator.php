@@ -12,14 +12,6 @@ function css_generator($code, $class){
 	echo ' @font-face { font-family:"'.$css_code['font-family'].'"; src:url("';
     echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
     }else{}
-    if($class=='body'){
-	echo 'body {';
-	if($css_code['background']){
-	    echo 'background:'.$css_code['background'].';';
-	}
-	echo '} ';
- 
-    }else{
 
 
     echo '.'.$class.'{';
@@ -42,9 +34,9 @@ function css_generator($code, $class){
 	echo ' min-height:'.$height.'px;';
 	echo ' height:auto;';
     }else{
-	echo 'min-height:50px;';
-	echo ' height:auto;';
-    }
+//      echo 'height:50px;';
+//      echo ' height:auto;';
+  }
 
     if($css_code['top']){
 	$top = $css_code['top']*50;
@@ -93,6 +85,5 @@ function css_generator($code, $class){
     }else{}
 
     echo '}';
-    }
 }
 ?>
