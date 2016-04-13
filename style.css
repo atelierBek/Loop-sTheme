@@ -67,7 +67,11 @@ p{
     margin-top: 0px;
 }
 
-
+#wave{
+  width:100%;
+  height: 100%;
+  position: fixed;
+}
 
 .titre{
 margin-top: 0px;
