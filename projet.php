@@ -18,7 +18,6 @@ css_generator($pods->get_field('body_code'), 'body');
 
 
 echo '</style>';
-
     $titre = $pods->get_field('titre');
     $presentation = $pods->get_field('presentation');
     $actualites = $pods->get_field('actualites');
@@ -31,7 +30,7 @@ echo '</style>';
 	echo '<div class="titre">'.$titre.'</div>';
     }
     if($presentation){
-	echo '<div class="presentation">'.$presentation.'</div>';
+	echo '<div class="presentation" >'.$presentation.'</div>';
     }
     if($actualites){
 	echo '<div class="actualites">'.$actualites.'</div>';
@@ -44,5 +43,11 @@ echo '</style>';
     }
 }
 ?>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js"></script>
+
+<canvas></canvas>
+<!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js">
+</script>-->
+
+
+
 

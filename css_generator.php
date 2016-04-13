@@ -13,6 +13,14 @@ function css_generator($code, $class){
 	echo ' @font-face { font-family:"'.$css_code['font-family'].'"; src:url("';
     echo bloginfo('template_directory').'/typotheque/'.$css_code['font-family'].'.ttf"); } ';
     }else{}
+    if($class=='body'){
+	echo 'body {';
+	if($css_code['background']){
+	    echo 'background:'.$css_code['background'].';';
+	}
+	echo '} ';
+ 
+    }else{
 
 
     echo '.'.$class.'{';
@@ -27,7 +35,7 @@ function css_generator($code, $class){
 
 	echo ' width:'.$width.'%;';
     }else{
-      echo 'width:5%';
+      echo 'width:5%;';
     }
 
     if($css_code['height']){
@@ -35,9 +43,9 @@ function css_generator($code, $class){
 	echo ' min-height:'.$height.'px;';
 	echo ' height:auto;';
     }else{
-//      echo 'height:50px;';
-//      echo ' height:auto;';
-  }
+	echo 'min-height:50px;';
+	echo ' height:auto;';
+    }
 
     if($css_code['top']){
 	$top = $css_code['top']*50;
@@ -75,7 +83,7 @@ function css_generator($code, $class){
     if($css_code['padding']){
 	echo ' padding:'.$css_code['padding'].'px;';
     }else{
-	echo ' padding:3px;';
+	echo ' padding:0px;';
     }
     if($css_code['text-align']){
 	echo ' text-align:'.$css_code['text-align'].';';
@@ -92,5 +100,6 @@ function css_generator($code, $class){
 
 
     echo '}';
+    }
 }
 ?>
