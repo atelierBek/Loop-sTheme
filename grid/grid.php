@@ -1,14 +1,10 @@
 <html>
     <head>
 	<link rel="stylesheet" href="grid.css" type="text/css">
-    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     </head>
     <body class="body_grid">
-
-
-
 	<div class="test" style="display:none">width:3;background:red;margin-top:4</div>
     <div class="footer">
 
@@ -20,11 +16,11 @@
 		    <option>load a template</option>
 		    <?php 
 			$dir = opendir("save/"); 
-			while($file = readdir($dir)) { 
-		    ?>
+			while($file = readdir($dir)) { 	
+			?>
 			    <option value="<?php echo $file;?>"><?php echo $file; ?></option>
-		    <?php
-			} 
+			<?php
+			 }
 			closedir($dir); 
 		    ?> 
 		</select>

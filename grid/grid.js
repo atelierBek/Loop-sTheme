@@ -4,16 +4,17 @@ var button = [];
     button[2] = ['presentation', 'presentation', 'bloc'];
     button[3] = ['calendrier', 'calendrier', 'bloc'];
     button[4] = ['resetAll', 'reset all', 'option'];
+    
+    
 // A D D _ WINDOW FOR BLOC
 function addWind(bloc){
     $('body').prepend('<div class="windParam windParam_'+bloc+'" ></div>');
-    $('.windParam_'+bloc).append('<h3>'+bloc+'<br>--</h3>');
+    $('.windParam_'+bloc).append('<h3>'+bloc+'</h3><button onClick="hideWind(\''+bloc+'\');">X</button>');
     $('.windParam_'+bloc).append('<div style="width:100%"><button class="btn" id="btn_'+bloc+'" OnClick="depla(\''+bloc+'\',\'on\')" >on</button></div>');
     $('.windParam_'+bloc).append('<textarea rows="20" cols="30" class="editor editor_'+bloc+'"></textarea>');
     $('.windParam_'+bloc).append('<button rows="20" class="btn" onClick="Reset(\''+bloc+'\',\'code\');">reset style</button>');
-    $('.windParam_'+bloc).append('<br> text<br><textarea rows="10" cols="30" class="text text_'+bloc+'">'+bloc+'</textarea>');
+    $('.windParam_'+bloc).append('<textarea rows="10" cols="30" class="text text_'+bloc+'">'+bloc+'</textarea>');
     $('.windParam_'+bloc).append('<button rows="20" class="btn" onClick="Reset(\''+bloc+'\',\'text\');">reset text</button>');
-    //return i;
 }
 
 
@@ -36,8 +37,6 @@ $('.form_save').append('<input type="text" id="save_name" >');
 $('.form_save').append('<button class="btn" type="button" onClick="submitdata();">Save</button>');
 $('.bloc').hide();
 $('.windParam').hide();
-
-
 
 
 // CREATION DE LA GRILLE
@@ -175,13 +174,15 @@ for(var i=1; i<button.length; i++){
 function submitdata() {
     var saveC = [];
     var saveT = [];
-    var save_name = document.getElementById("save_name").value;i
+    var save_name = document.getElementById("save_name").value;
     var dataString = [];
     dataString = 'name=' + save_name;
     alert(save_name);
     for(var i = 1; i < button.length; i ++){
-        saveC[button[i][0]] = document.getElementById("saveC_"+button[i][0]).innerHTML;
-        saveT[button[i][0]] = document.getElementById("saveT_"+button[i][0]).innerHTML;
+        //saveC[button[i][0]] = document.getElementById("saveC_"+button[i][0]).innerHTML;
+        
+        saveC[button[i][0]] = $("#saveC_"+button[i][0]).html();
+        saveC[button[i][0]] = $("#saveT_"+button[i][0]).html();
     alert(saveC[button[i][0]]+' et '+saveT[button[i][0]]);
     dataString += '&'+button[i][0]+'C='+saveC[button[i][0]]+'&'+button[i][0]+'T='+saveT[button[i][0]];  
     
@@ -198,7 +199,7 @@ function submitdata() {
 	    cache: false,
 	    success: function(html) {
 		alert("coool");
-		$('#msg').html(html);
+		//$('#msg').html(html);
 		//$('#msg').hide();
 	    }
 
@@ -219,6 +220,12 @@ $('.footer').mouseover(function(){
 $('.footer').mouseout(function(){
     $(this).height('20px');
 });
+
+
+function hideWind(bloc){
+    $('.windParam_'+bloc).hide('fast');
+}
+
 
 // REMOVE WIND
 
