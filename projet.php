@@ -25,13 +25,13 @@ echo '</style>';
     $lequipe = $pods->get_field('lequipe');
     $media = $pods->get_field('media');
     $grille = $pods->get_field('grille');
-    
+
 
     if($titre){
-	echo '<div class="titre">'.$titre.'</div>';
+	echo '<div class="titre" id="titre">'.$titre.'</div>';
     }
     if($presentation){
-	echo '<div class="presentation">'.$presentation.'</div>';
+	echo '<div class="blabla">'.$presentation.'</div>';
     }
     if($actualites){
 	echo '<div class="actualites">'.$actualites.'</div>';
@@ -46,3 +46,32 @@ echo '</style>';
 ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js"></script>
 
+<script>
+
+var Fonts = ["Inknut", "autopia"];
+var titre = document.getElementById("titre");
+
+titre.addEventListener("mouseover", changeFonts);
+
+function changeFonts() {
+
+ for (var i = 0; i < 2; i++) {
+
+    // titre.style.fontFamily=Fonts[i];
+     console.log(i);
+
+ }
+
+ //setInterval(changeFonts, 1000);
+
+}
+
+</script>
+
+<!-- <script type="text/javascript">
+$(".titre").hover( function () {
+    console.log('salut');
+    $(".titre").transition({ 'font-size': '40px' }, 100);
+    $(".titre").transition({ 'font-size': '12px' }, 100);
+});
+</script> -->
