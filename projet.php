@@ -1,3 +1,6 @@
+
+<canvas id="vague">salut</canvas>
+
 <?php
 
 $pods = new Pod('page_projet');
@@ -44,10 +47,16 @@ echo '</style>';
 }
 ?>
 
-<canvas></canvas>
+
+<script anvas="vague">
+alert('salut');
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(40, 90));
+myPath.add(new Point(90, 40));
+myPath.add(new Point(140, 90));
+</script>
 <!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js">
 </script>-->
-
-
 
 
