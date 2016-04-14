@@ -27,12 +27,13 @@ echo '</style>';
     $lequipe = $pods->get_field('lequipe');
     $media = $pods->get_field('media');
     $grille = $pods->get_field('grille');
-    
+
 
     if($titre){
-	echo '<div class="titre">'.$titre.'</div>';
+	echo '<div class="titre" id="titre">'.$titre.'</div>';
     }
     if($presentation){
+
 	echo '<div class="presentation" >'.$presentation.'</div>';
     }
     if($actualites){
@@ -46,17 +47,5 @@ echo '</style>';
     }
 }
 ?>
-
-
-<script anvas="vague">
-alert('salut');
-var myPath = new Path();
-myPath.strokeColor = 'black';
-myPath.add(new Point(40, 90));
-myPath.add(new Point(90, 40));
-myPath.add(new Point(140, 90));
-</script>
-<!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/grid/grid.js">
-</script>-->
 
 
