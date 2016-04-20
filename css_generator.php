@@ -19,9 +19,8 @@ function css_generator($code, $class){
 	    echo 'background:'.$css_code['background'].';';
 	}
 	echo '} ';
- 
-    }else{
 
+    }else{
 
     echo '.'.$class.'{';
 
@@ -80,11 +79,30 @@ function css_generator($code, $class){
 	echo ' font-family:"'.$css_code['font-family'].'";';
     }else{}
 
-    if($css_code['padding']){
-	echo ' padding:'.$css_code['padding'].'px;';
+    if($css_code['padding-left']){
+	echo ' padding-left:'.$css_code['padding-left'].'px;';
     }else{
-	echo ' padding:0px;';
+	echo ' padding-left:0px;';
     }
+
+    if($css_code['padding-top']){
+  echo ' padding-top:'.$css_code['padding-top'].'px;';
+    }else{
+  echo ' padding-top:0px;';
+    }
+
+    if($css_code['padding-right']){
+  echo ' padding-right:'.$css_code['padding-right'].'px;';
+    }else{
+  echo ' padding-right:0px;';
+    }
+
+    if($css_code['padding-bottom']){
+  echo ' padding-bottom:'.$css_code['padding-bottom'].'px;';
+    }else{
+  echo ' padding-bottom:0px;';
+    }
+
     if($css_code['text-align']){
 	echo ' text-align:'.$css_code['text-align'].';';
     }else{
