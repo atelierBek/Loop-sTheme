@@ -68,20 +68,20 @@ p{
 }
 
 #wave_left{
-  border: solid 1px blue;
-  width:7%;
-  height: 100%;
-  left:0px;
-  position: fixed;
+  transform-origin: left;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
-  transform-origin: 0 0;
-
+  border: solid 1px blue;
+  width:100%;
+  height:7%;
+  left:50%;
+  position: fixed;
+  z-index: 104;
 }
 
 #wave_right{
-  transform-origin: 0 0;
+  transform-origin: 0px 50px;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -89,10 +89,9 @@ p{
   height: 7%;
   bottom: 0px;
   right:0px;
-  /*border: solid 1px blue;*/
+  border: solid 1px blue;
   position: fixed;
   z-index: 103;
-
 }
 
 #wave_top{
@@ -153,4 +152,3 @@ h2{
 .presentation{
   text-transform: uppercase;
 }
-

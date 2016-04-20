@@ -46,12 +46,11 @@ echo '</style>';
 ?>
 <canvas id="wave_bottom"></canvas>
 <canvas id="wave_top"></canvas>
-<canvas id="wave_left"></canvas>
-<canvas id="wave_right"></canvas>
+<!-- <canvas id="wave_left"></canvas>
+<canvas id="wave_right"></canvas> -->
 
 <!--script paper js -->
 <script type="text/paperscript" src="<?php bloginfo('template_directory'); ?>/wave.js" canvas="wave_bottom"></script>
 <script type="text/paperscript" src="<?php bloginfo('template_directory'); ?>/wave.js" canvas="wave_top"></script>
 <script type="text/paperscript" src="<?php bloginfo('template_directory'); ?>/wave.js" canvas="wave_left"></script>
 <script type="text/paperscript" src="<?php bloginfo('template_directory'); ?>/wave.js" canvas="wave_right"></script>
-
