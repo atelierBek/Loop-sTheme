@@ -44,17 +44,11 @@ echo '</style>';
     }
 }
 ?>
-<canvas id="wave"></canvas>
+<canvas id="wave" class="wave_bottom"></canvas>
+<canvas id="wave" class="wave_top"></canvas>
 
-<script>
-console.log("test");
-alert("sqlut");
-
-
-</script>
 <!--script paper js -->
 <script type="text/paperscript" canvas="wave">
-
 var values = {
 	friction: 0.8,
 	timeStep: 0.01,
@@ -90,8 +84,9 @@ Spring.prototype.update = function() {
 
 function createPath(strength) {
 	var path = new Path({
-		fillColor: 'pink'
+	    fillColor: 'back'
 	});
+	//path.strokeColor= 'green';
 	springs = [];
 	for (var i = 0; i <= values.amount; i++) {
 		var segment = path.add(new Point(i / values.amount, 0.5) * size);
@@ -113,7 +108,7 @@ function createPath(strength) {
 
 function onResize() {
 	if (path)
-		path.remove();
+	path.remove();
 	size = view.bounds.size * [2, 1];
 	path = createPath(0.1);
 }
@@ -163,19 +158,7 @@ function onKeyDown(event) {
 	}
 }
 </script>
-<!-- <script type="text/javascript">
-$(".titre").hover( function () {
-    console.log('salut');
-    $(".titre").transition({ 'font-size': '40px' }, 100);
-    $(".titre").transition({ 'font-size': '12px' }, 100);
-});
-</script>
--->
 
-<!-- <script>
-var wave = getElementById("wave");
-console.log(wave);
-</script> -->
  <script>
 //var Fonts = ["archivoblack", "autopia", "autopiareg", "belgika","rubikblack"];
 var Fonts = ["rubikblack", "rubikbold", "rubikmedium", "rubikregular","rubiklight", "rubikregular","rubikmedium","rubikbold","rubikblack"];
