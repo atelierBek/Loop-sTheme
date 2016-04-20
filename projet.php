@@ -1,3 +1,6 @@
+
+<canvas id="vague">salut</canvas>
+
 <?php
 
 $pods = new Pod('page_projet');
@@ -45,4 +48,4 @@ echo '</style>';
 }
 ?>
 
-<canvas></canvas>
+
