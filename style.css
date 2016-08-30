@@ -20,7 +20,6 @@ font-family: "logocalli";
 src: url("typotheque/logocalli_regular_none.ttf");
 }
 
-
 @font-face {
 font-family: "rubikmedium";
 src: url("typotheque/Rubik_Medium.ttf");
@@ -41,8 +40,7 @@ font-family: "belgika";
 src: url("typotheque/Belgika8th_regular_none.ttf");
 }
 
-
-  @font-face {
+@font-face {
   font-family: "archivoblack";
   src: url("typotheque/archivoblack_regular_none.ttf");
 }
@@ -62,17 +60,20 @@ body{
 overflow-x: hidden;
 margin-top: 0px;
 margin-bottom: 0px;
+/*background-image: url(fond_loop2.png);
+background-repeat:no-repeat;*/
 }
+
 p{
     margin-top: 0px;
 }
 
 #wave_left{
   transform-origin: left;
-  -webkit-transform: rotate(90deg);
+  /*-webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
-  border: solid 1px blue;
+  transform: rotate(90deg);*/
+  /*border: solid 1px blue;*/
   width:100%;
   height:7%;
   left:50%;
@@ -81,42 +82,58 @@ p{
 }
 
 #wave_right{
-  transform-origin: 0px 50px;
-  -webkit-transform: rotate(-90deg);
+  transform-origin: 0px 0px;
+  /*-webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  width:50%;
-  height: 7%;
+  transform: rotate(-90deg);*/
+  width:70%;
+  height: 45%;
   bottom: 0px;
-  right:0px;
-  border: solid 1px blue;
+  left:0px;
   position: fixed;
-  z-index: 103;
+  z-index: 1030;
 }
 
-#wave_top{
+#lequipe{
+
+}
+
+/*#wave_top{
   width:100%;
-  height: 7%;
+  height:20%;
   top: 0px;
   position: fixed;
+  filter: blur(50px);
+        -webkit-filter: blur(50px);
+        -moz-filter: blur(50px);
+        -o-filter: blur(50px);
+        -ms-filter: blur(50px);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
-  z-index: 102;
-}
+    transform: rotate(180deg);
+  z-index: 100;
+}*/
 
 #wave_bottom{
-  width:100%;
-  height: 7%;
-  bottom: 0px;
+  width:150%;
+  color: #00FFFF;
+  height: 70%;
+  bottom: -50px;
+  left:-20px;
   position: fixed;
-  z-index: 101;
+  filter: blur(50px);
+        -webkit-filter: blur(50px);
+        -moz-filter: blur(50px);
+        -o-filter: blur(50px);
+        -ms-filter: blur(50px);
+  z-index: 99;
 }
+
 
 .titre{
 margin-top: 0px;
 padding-left: 5%;
-padding-top: 15px;
+padding-top: 18px;
 /*background: -webkit-linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0));
 	background: -moz-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 	background: -ms-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
